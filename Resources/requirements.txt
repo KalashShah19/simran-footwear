@@ -1,0 +1,17 @@
+Pages 
+    Home
+    Register
+    Login
+    Products
+    Product Details
+    Cart
+    Orders
+    Checkout and Payment
+    Profile
+
+Admin Side
+    Clients Data
+    Orders Data
+    Sales Report
+    Products Data
+    Manage Products

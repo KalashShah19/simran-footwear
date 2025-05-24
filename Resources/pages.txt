@@ -1,0 +1,22 @@
+Visitors
+    - Home page 
+    - Register 
+    - Login 
+    - forgot password (sent OTP via Email and verify )
+    - Products - filter, search, showcase
+    - Product details ( show details of products )
+
+Client page 
+    - cart ( add, remove and update products in cart )
+    - orders ( see current and old orders )
+    - checkout ( address and confirm )
+    - Payment
+    - profile
+    - change password
+
+Admin page 
+    - Clients Data
+    - delivery and orders
+    - manage home page
+    - manage products 
+    - sales report 
