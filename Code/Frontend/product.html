@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Unicons (for icons) -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/product.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/copyright.css" />
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/index.js" defer></script>
+
+  <title>Simran Footwear</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="primary-header container flex" id="header"></header>
+  <script src="js/header.js"></script>
+
+  <!-- Product Detail Section -->
+  <section class="product-detail container grid">
+    <div class="product-images">
+      <div class="main-image">
+        <img id="currentImage" src="image/shoe1.jpg" alt="Footwear image" />
+      </div>
+      <div class="thumbnail-images">
+        <img src="image/shoe1.jpg" alt="Thumb 1" onclick="changeImage(this)" />
+        <img src="image/shoe2.jpg" alt="Thumb 2" onclick="changeImage(this)" />
+        <img src="image/shoe3.jpg" alt="Thumb 3" onclick="changeImage(this)" />
+        
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1 class="product-title fs-montserrat fs-500">Men's Sports Shoes</h1>
+      <p class="product-price fs-poppins fs-200">₹1,999</p>
+      <p class="product-description fs-montserrat">
+        High-performance sports shoes designed for comfort, grip, and durability. Perfect for running and workouts.
+      </p>
+
+      <div class="product-sizes">
+        <p class="fs-poppins fs-200">Available Sizes:</p>
+        <button class="size-btn fs-poppins ">7</button>
+        <button class="size-btn fs-poppins ">8</button>
+        <button class="size-btn fs-poppins ">9</button>
+        <button class="size-btn fs-poppins ">10</button>
+      </div>
+
+      <button class="add-to-cart fs-poppins">Add to Cart</button>
+
+      <!-- Additional Details -->
+      <div class="extra-info">
+        <div>
+          <i class="uil uil-truck icon"></i>
+          <div>
+            <h4 class="fs-poppins fs-200">Shipping</h4>
+            <p class="fs-poppins fs-100">Free shipping on orders over ₹999. Delivery within 4-7 business days.</p>
+          </div>
+        </div>
+        <div>
+          <i class="uil uil-rotate-360 icon"></i>
+          <div>
+            <h4 class="fs-poppins fs-200">Return Policy</h4>
+            <p class="fs-poppins fs-100">Easy returns within 15 days of delivery. No questions asked.</p>
+          </div>
+        </div>
+        <div>
+          <i class="uil uil-wrench icon"></i>
+          <div>
+            <h4 class="fs-poppins fs-200">Care Instructions</h4>
+            <p class="fs-poppins fs-100">Wipe with a clean dry cloth. Do not machine wash.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="footer grid" id="footer"></section>
+  <section class="copyright" id="copyright"></section>
+
+  <!-- Scripts -->
+  <script src="js/footer.js"></script>
+  <script src="js/copyright.js"></script>
+  <script src="js/product.js"></script>
+</body>
+
+</html>

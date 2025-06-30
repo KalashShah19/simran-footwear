@@ -1,0 +1,82 @@
+<div class="header-inner-one flex">
+    <div class="logo">
+        <img src="image/logo.png" alt="" style="width: 290px;">
+    </div>
+    <button class="mobile-close-btn" data-visible="false" aria-controls="primary-navigation">
+        <i class="uil uil-times-circle"></i>
+    </button>
+    <nav>
+        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+            <li><a class="fs-100 fs-montserrat bold-500" href="/index.html">Home</a></li>
+            <li><a class="fs-100 fs-montserrat bold-500" href="/shop.html">Shop</a></li>
+            <li><a class="fs-100 fs-montserrat bold-500" href="/aboutus.html">About Us</a></li>
+            <li><a class="fs-100 fs-montserrat bold-500" href="/index.html">Profile</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="header-login flex">
+    <p class="fs-100 fs-montserrat bold-500">Login</p>
+    <i class="uil uil-search"></i>
+    <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag"></i>
+
+    <!-- Cart Box -->
+    <div id="cart-icon" data-visible="false" class="cart-icon">
+        <div class="shopping flex">
+            <p>Shopping Basket</p>
+            <i id="cross-btn" class="uil uil-times"></i>
+        </div>
+        <div class="cart bold-800 flex">
+            <i class="uil uil-shopping-cart-alt"></i>
+            <p>Cart is Empty</p>
+        </div>
+    </div>
+    <div class="mobile-open-btn">
+        <i class="uil uil-align-right"></i>
+    </div>
+</div>
+
+
+
+
+<div id="auth-popup" class="popup-container">
+  <div class="popup-card">
+    <div class="close-popup">&times;</div>
+
+    <!-- Sliding Container -->
+    <div class="card-slider">
+      <!-- LOGIN PANEL -->
+      <div class="card-panel login-panel">
+        <h2 class="popup-title fs-montserrat">LOGIN FORM</h2>
+        <div class="toggle-btns">
+          <button id="login-tab" class="active fs-poppins">Login</button>
+          <button id="signup-tab" class="fs-poppins">Signup</button>
+        </div>
+        <form class="popup-form login-form">
+          <input type="email" placeholder="Email" class="fs-poppins" required>
+          <input type="password" placeholder="Password" class="fs-poppins" required>
+          <div class="forgot-link fs-poppins">Forgot password?</div>
+          <button class="form-btn fs-poppins">Login</button>
+          <div class="bottom-text fs-poppins">Don’t have an account? <a href="#" id="toggle-signup">Signup</a></div>
+        </form>
+      </div>
+
+      <!-- SIGNUP PANEL -->
+      <div class="card-panel signup-panel">
+        <h2 class="popup-title fs-poppins">SIGNUP FORM</h2>
+        <div class="toggle-btns">
+          <button id="login-tab-2" class="fs-poppins">Login</button>
+          <button id="signup-tab-2" class="active fs-poppins">Signup</button>
+        </div>
+        <form class="popup-form">
+          <input type="text" placeholder="Full Name" class="fs-poppins" required>
+          <input type="email" placeholder="Email" class="fs-poppins" required>
+          <input type="password" placeholder="Password" class="fs-poppins" required>
+          <input type="password" placeholder="Confirm Password" class="fs-poppins" required>
+          <button class="form-btn">Signup</button>
+          <div class="bottom-text fs-poppins">Already have an account? <a href="#" id="toggle-login">Login</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP API Demo</title>
+</head>
+<body>
+    <h2>Users</h2>
+    <button onclick="getUsers()">Load Users</button>
+    <pre id="result"></pre>
+
+    <h3>Create User</h3>
+    <button onclick="createUser()">Add User</button>
+
+    <script>
+        function getUsers() {
+            fetch('get-users.php')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+                });
+        }
+
+        function createUser() {
+            fetch('create-user.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: 'New User', email: 'new@example.com' })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                getUsers();
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login with OTP</title>
+</head>
+<body>
+    <h2>Login</h2>
+
+    <!-- Step 1: Enter email or mobile -->
+    <form id="loginForm">
+        <label>
+            Email or Mobile Number:
+            <input type="text" id="identifier" name="identifier" required />
+        </label><br /><br />
+        <button type="submit" id="sendOtpBtn">Send OTP</button>
+    </form>
+
+    <!-- Step 2: Enter OTP (hidden initially) -->
+    <form id="otpForm" style="display:none; margin-top: 20px;">
+        <label>
+            Enter OTP:
+            <input type="text" id="otp" name="otp" required maxlength="6" />
+        </label><br /><br />
+        <button type="submit" id="verifyOtpBtn">Verify OTP</button>
+    </form>
+
+    <p id="result" style="color: red; font-weight: bold;"></p>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const otpForm = document.getElementById('otpForm');
+        const result = document.getElementById('result');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            result.textContent = '';
+
+            const identifier = document.getElementById('identifier').value.trim();
+            if (!identifier) {
+                result.textContent = 'Please enter your email or mobile number.';
+                return;
+            }
+
+            const payload = {
+                action: 'start_login',
+                identifier: identifier
+            };
+
+            try {
+                const res = await fetch('server.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+
+                if (data.status) {
+                    result.style.color = 'green';
+                    result.textContent = data.message;
+                    loginForm.style.display = 'none';
+                    otpForm.style.display = 'block';
+                } else {
+                    result.style.color = 'red';
+                    result.textContent = data.message;
+                }
+            } catch (error) {
+                result.style.color = 'red';
+                result.textContent = 'Error sending OTP. Please try again.';
+            }
+        });
+
+        otpForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            result.textContent = '';
+
+            const identifier = document.getElementById('identifier').value.trim();
+            const otp = document.getElementById('otp').value.trim();
+
+            if (!otp) {
+                result.textContent = 'Please enter the OTP sent to your email.';
+                return;
+            }
+
+            const payload = {
+                action: 'verify_otp',
+                identifier: identifier,
+                otp: otp
+            };
+
+            try {
+                const res = await fetch('server.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+
+                if (data.status) {
+                    result.style.color = 'green';
+                    result.textContent = 'Login successful! Welcome, ' + data.user.first_name;
+                    otpForm.style.display = 'none';
+                } else {
+                    result.style.color = 'red';
+                    result.textContent = data.message;
+                }
+            } catch (error) {
+                result.style.color = 'red';
+                result.textContent = 'Error verifying OTP. Please try again.';
+            }
+        });
+    </script>
+</body>
+</html>

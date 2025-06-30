@@ -1,0 +1,160 @@
+.footer{
+    margin-block: 5rem;
+    width: 85vw;
+    margin-inline: auto;
+    grid-template-columns: auto;
+    --grid-gap: 1.5rem;
+    grid-template-areas: 
+    'one'
+    'two'
+    'three'
+    'four';
+}
+
+.footer:nth-child(1){
+    grid-area: one;
+}
+
+.footer:nth-child(2){
+    grid-area: two;
+}
+
+.footer:nth-child(3){
+    grid-area: three;
+}
+
+.footer:nth-child(4){
+    grid-area: four;
+}
+
+.footer-logo{
+    --grid-gap: 2rem;
+}
+
+.footer-logo > p{
+    width: 60%;
+}
+
+.footer-logo .social-media{
+    --flex-gap: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-menu > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-menu li{
+    margin-top: 0.5rem;
+}
+
+.footer-menu a{
+    text-decoration: none;
+}
+
+.footer .contact > p{
+    width: 60%;
+}
+
+.inputField{
+    padding: 0.5rem;
+    border-radius: 4rem;
+}
+
+.inputField > button{
+    border: 0;
+    padding: 0.7rem 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.inputField input{
+    border: 0;
+    width: 60%;
+
+}
+
+.inputField input:hover,
+.inputField input:focus{
+    outline: none;
+}
+
+.inputField input[type="email"]{
+    margin-left: 2.5rem;
+}
+
+
+/* Layout for Tab and Desktop */
+
+@media (min-width:35em) and (max-width:59em) {
+    .footer{
+        --grid-gap: 0.5rem;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        'one two'
+        'three four';
+    }
+
+    .footer-logo > p{
+        font-size: 1rem;
+    }
+
+    .footer-logo .social-media{
+        --flex-gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-menu li{
+        margin-top: 0.1rem;
+    }
+
+    .footer-menu a{
+        font-size: 1rem;
+    }
+
+    .updates{
+        font-size: 1.5rem;
+    }
+
+    .inputField input{
+        border: 0;
+        width: 50%;
+    }
+
+    .inputField input[type="email"]{
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width:59em) {
+    .footer{
+        width: 92vw;
+        margin-top: 6rem;
+        --grid-gap: 2rem;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        'one two three four';
+    }
+
+    .footer-logo > p{
+        font-size: 1rem;
+    }
+
+    .footer-menu > h3{
+        font-size: 1rem;
+    }
+
+    .footer-menu a{
+        font-size: 1rem;
+    }
+
+    .contact > h3{
+        font-size: 1rem;
+    }
+
+    .emails > h3{
+        font-size: 1rem;
+    }
+}
