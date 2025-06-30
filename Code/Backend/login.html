@@ -53,6 +53,7 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
+
                 const data = await res.json();
 
                 if (data.status) {
@@ -65,8 +66,9 @@
                     result.textContent = data.message;
                 }
             } catch (error) {
+                console.log(error.message);
                 result.style.color = 'red';
-                result.textContent = 'Error sending OTP. Please try again.';
+                result.textContent = 'Error sending OTP. Error = ' + error.message;
             }
         });
 
