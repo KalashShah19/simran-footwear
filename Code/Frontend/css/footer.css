@@ -11,6 +11,7 @@
         'three'
         'four';
     margin-top: 3rem;
+    background-color: var(--clr-gray);
 }
 
 .footer:nth-child(1) {
@@ -122,6 +123,8 @@
         grid-template-areas:
             'one two'
             'three four';
+    background-color: var(--clr-gray);
+
     }
 
     .footer-logo>p {
@@ -168,6 +171,8 @@
         grid-template-columns: max-content;
         grid-template-areas:
             'one two three four';
+    background-color: var(--clr-gray);
+
     }
 
     .footer-logo>p {
