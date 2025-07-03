@@ -2,7 +2,7 @@
 .hero-section{
   width: 93vw;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
   background-color: hsl(var(--clr-gray));
   border-radius: 2rem;
   padding-top: 5rem;

@@ -1,160 +1,196 @@
-.footer{
+.footer {
     margin-block: 5rem;
     width: 85vw;
+    margin-bottom: 1rem;
     margin-inline: auto;
     grid-template-columns: auto;
-    --grid-gap: 1.5rem;
-    grid-template-areas: 
-    'one'
-    'two'
-    'three'
-    'four';
+    --grid-gap: 2rem;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four';
+    margin-top: 3rem;
 }
 
-.footer:nth-child(1){
+.footer:nth-child(1) {
     grid-area: one;
 }
 
-.footer:nth-child(2){
+.footer:nth-child(2) {
     grid-area: two;
 }
 
-.footer:nth-child(3){
+.footer:nth-child(3) {
     grid-area: three;
 }
 
-.footer:nth-child(4){
+.footer:nth-child(4) {
     grid-area: four;
 }
 
-.footer-logo{
+.footer-logo {
     --grid-gap: 2rem;
 }
 
-.footer-logo > p{
-    width: 60%;
+.footer-logo>p {
+    width: 80%;
+    letter-spacing: 0.5px;
+    line-height: 1.5rem;
 }
 
-.footer-logo .social-media{
+.footer-logo .social-media {
     --flex-gap: 1.5rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
 }
 
-.footer-menu > ul{
+.footer-menu>ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.footer-menu li{
+.footer-menu li {
     margin-top: 0.5rem;
+    letter-spacing: 1px;
 }
 
-.footer-menu a{
+.footer-menu a {
     text-decoration: none;
+    letter-spacing: 1px;
 }
 
-.footer .contact > p{
-    width: 60%;
+.footer .contact>p {
+    width: 80%;
+    line-height: 2rem;
+    letter-spacing: 1px;
 }
 
-.inputField{
+.inputField {
     padding: 0.5rem;
     border-radius: 4rem;
 }
 
-.inputField > button{
+.inputField>button {
     border: 0;
     padding: 0.7rem 1.5rem;
     border-radius: 3rem;
     cursor: pointer;
 }
 
-.inputField input{
+.inputField input {
     border: 0;
     width: 60%;
 
 }
 
 .inputField input:hover,
-.inputField input:focus{
+.inputField input:focus {
     outline: none;
 }
 
-.inputField input[type="email"]{
-    margin-left: 2.5rem;
+.inputField input[type="email"] {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
 }
 
+.footer-menu > h3{
+    letter-spacing: 0.5px;
+}
+
+.emails > h3{
+    letter-spacing: 0.5px;
+}
+
+.contact > h3{
+    padding-bottom: 0.4rem;
+    letter-spacing: 0.5px;
+}
+
+.logo{
+    letter-spacing: 5px;
+    line-height: 20px;
+}
 
 /* Layout for Tab and Desktop */
 
 @media (min-width:35em) and (max-width:59em) {
-    .footer{
+    .footer {
         --grid-gap: 0.5rem;
         grid-template-columns: auto;
-        grid-template-areas: 
-        'one two'
-        'three four';
+        grid-template-areas:
+            'one two'
+            'three four';
     }
 
-    .footer-logo > p{
+    .footer-logo>p {
         font-size: 1rem;
     }
 
-    .footer-logo .social-media{
+    .footer-logo .social-media {
         --flex-gap: 1.5rem;
         margin-bottom: 1rem;
     }
 
-    .footer-menu li{
+    .footer-menu li {
         margin-top: 0.1rem;
     }
 
-    .footer-menu a{
+    .footer-menu a {
         font-size: 1rem;
     }
 
-    .updates{
+    .updates {
         font-size: 1.5rem;
     }
 
-    .inputField input{
+    .inputField input {
         border: 0;
         width: 50%;
     }
 
-    .inputField input[type="email"]{
+    .inputField input[type="email"] {
         margin-left: 1rem;
+
+    }
+
+    .footer-img {
+        width: 180px;
     }
 }
 
 @media (min-width:59em) {
-    .footer{
+    .footer {
         width: 92vw;
-        margin-top: 6rem;
+        margin-top: 4rem;
         --grid-gap: 2rem;
-        grid-template-columns: auto;
-        grid-template-areas: 
-        'one two three four';
+        grid-template-columns: max-content;
+        grid-template-areas:
+            'one two three four';
     }
 
-    .footer-logo > p{
+    .footer-logo>p {
         font-size: 1rem;
     }
 
-    .footer-menu > h3{
+    .footer-menu>h3 {
         font-size: 1rem;
     }
 
-    .footer-menu a{
+    .footer-menu a {
         font-size: 1rem;
     }
 
-    .contact > h3{
+    .contact>h3 {
         font-size: 1rem;
     }
 
-    .emails > h3{
+    .emails>h3 {
         font-size: 1rem;
+    }
+
+    .footer-img {
+        width: 180px;
     }
 }
