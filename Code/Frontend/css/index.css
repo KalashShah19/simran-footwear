@@ -1,6 +1,6 @@
-/* Hero Section */
+/* -----------------Hero Section----------------- */
 .hero-section {
-  width: 93vw;
+  width: 90vw;
   margin-inline: auto;
   background-color: hsl(var(--clr-gray));
   border-radius: 2rem;
@@ -12,67 +12,33 @@
   border-radius: 2rem;
 }
 
-.hero-inner {
-  justify-content: space-between;
-  align-items: center;
-  --flex-gap: 5rem;
-  padding-bottom: 4rem;
-}
-
-.hero-info {
-  display: none;
-}
-
-/* Tab */
 @media (min-width:35em) and (max-width:59em) {
   .hero-section {
-    width: 95vw;
+    width: 90vw;
     margin-inline: auto;
-  }
-
-  .lineheight2 {
-    --line2: 7rem
   }
 
 }
 
-/* Desktop */
 @media (min-width: 59rem) {
   .hero-section {
-    width: 95vw;
+    width: 90vw;
     margin-inline: auto;
-  }
-
-
-  .lineheight {
-    --line: 4rem;
-  }
-
-  .lineheight2 {
-    --line2: 13rem;
-  }
-
-  .hero-info {
-    display: block;
-    text-align: end;
-    width: 25%;
-  }
-
-  .big {
-    field-sizing: 5rem;
-  }
-
-  .hero-inner {
-    margin-top: -14rem;
-    padding-bottom: 8rem;
   }
 }
 
 
 
-/* Product Section */
+/* -----------------Product Category Section----------------- */
+.product-categories-heading{
+  margin: 2rem 0rem 2rem 0rem;
+  padding-block: 1.5rem;
+  text-align: center;
+  background-color: hsl(var(--clr-gray));
+}
+
 .product-categories {
-  width: 93vw;
+  width: 90vw;
   margin-inline: auto;
 }
 
@@ -107,12 +73,7 @@
   z-index: -11;
 }
 
-
-
-/* Layout for Tab and Desktop */
-
 @media (min-width:35em) and (max-width:59em) {
-
 
   .product-categories {
     width: 95vw;
@@ -144,7 +105,6 @@
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
-    /* Two items per row */
   }
 
   .category {
@@ -169,32 +129,21 @@
 
 
 
-/* Service Section */
+/* -----------------Service Section----------------- */
+.service-heading {
+  margin: 2rem 0rem 2rem 0rem;
+  padding-block: 1.5rem;
+  text-align: center;
+  background-color: hsl(var(--clr-gray));
+}
+
 .service-section {
   width: 90vw;
   margin-inline: auto;
   margin-block: 2rem;
   display: grid;
   gap: 1.5rem;
-  grid-template-areas:
-    'one two'
-    'three four';
-}
-
-.service:nth-child(1) {
-  grid-area: one;
-}
-
-.service:nth-child(2) {
-  grid-area: two;
-}
-
-.service:nth-child(3) {
-  grid-area: three;
-}
-
-.service:nth-child(4) {
-  grid-area: four;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .service {
@@ -212,7 +161,6 @@
   font-size: 0.79rem;
 }
 
-/* Layout for Tab and Desktop */
 
 @media (min-width:59em) {
 
@@ -221,7 +169,7 @@
     margin-inline: auto;
     display: grid;
     gap: 5rem;
-    grid-template-areas: 'one two three four';
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .service .fs-200 {
@@ -235,10 +183,9 @@
 }
 
 
-/* Best Selling */
-.best-product-heading,
-.product-categories-heading,
-.service-heading {
+/* -----------------Best Selling Product Section----------------- */
+
+.best-product-heading{
   margin: 2rem 0rem 2rem 0rem;
   padding-block: 1.5rem;
   text-align: center;
@@ -251,48 +198,9 @@
   text-align: center;
   display: grid;
   gap: 3rem;
-  grid-template-areas:
-    'one'
-    'two'
-    'three'
-    'four'
-    'five'
-    'six'
-    'seven'
-    'eight';
+  grid-template-columns: repeat(1, 1fr);
 }
 
-.best-seller:nth-child(1) {
-  grid-area: one;
-}
-
-.best-seller:nth-child(2) {
-  grid-area: two;
-}
-
-.best-seller:nth-child(3) {
-  grid-area: three;
-}
-
-.best-seller:nth-child(4) {
-  grid-area: four;
-}
-
-.best-seller:nth-child(5) {
-  grid-area: five;
-}
-
-.best-seller:nth-child(6) {
-  grid-area: six;
-}
-
-.best-seller:nth-child(7) {
-  grid-area: seven;
-}
-
-.best-seller:nth-child(8) {
-  grid-area: eight;
-}
 
 .best-seller-product {
   text-align: left;
@@ -336,11 +244,7 @@
 @media (min-width:35em) and (max-width:59em) {
   .best-seller {
     padding-block: 2rem;
-    grid-template-areas:
-      'one two'
-      'three four'
-      'five six'
-      'seven eight';
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
@@ -349,8 +253,6 @@
   .best-seller {
     width: 95vw;
     padding-block: 2rem;
-    grid-template-areas:
-      'one two three four'
-      'five six seven eight';
+    grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -35,29 +35,43 @@
   <script src="js/header.js"></script>
 
   <!-- Shop Section -->
-   <section class="shop-feature bg-gray grid">
+  <!-- Products Heading -->
+  <section class="products-heading">
     <h2 class="fs-poppins fs-300 bold-700">Products</h2>
-   </section>
+  </section>
+
+  <!-- Search & Filter Section -->
+  <section class="shop-filters container">
+    <form class="filter-form grid">
+      <input
+        type="text"
+        placeholder="Search Product..."
+        class="search-input fs-montserrat"
+        id="searchInput"
+      />
+
+      <select id="categoryFilter" class="fs-montserrat">
+        <option value="all">All Categories</option>
+        <option value="casual">Casual</option>
+        <option value="formal">Formal</option>
+        <option value="sports">Sports</option>
+      </select>
+
+      <select id="priceFilter" class="fs-montserrat">
+        <option value="default">Sort by Price</option>
+        <option value="low-to-high">Low to High</option>
+        <option value="high-to-low">High to Low</option>
+      </select>
+    </form>
+  </section>
+
 
    <main class="shop-main-container grid">
     <div>
-      <div class="shop-title flex">
-        <div>
-          <h2 class="fs-poppins fs-300">Shop</h2>
-          <p class="fs-montserrat">Showing 1-9 of 10</p>
-        </div>
-        <div>
-          <select name="text" id="" class="fs-poppins bg-black text-white">
-            <option value="text">Price Low to High</option>
-            <option value="text">Price High to Low</option>
-          </select>
-        </div>
-      </div>
-
       <section class="shop-product grid">
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -70,7 +84,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -83,7 +97,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -96,7 +110,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -109,7 +123,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -122,7 +136,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -135,7 +149,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -148,7 +162,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -161,7 +175,7 @@
 
         <div class="product-list grid">
           <img src="image/product-3.png" alt="">
-          <p class="fs-montserrat bold-600">V</p>
+          <p class="fs-montserrat bold-600">Casual & Comfortable Sandels</p>
           <div class="shop-btn flex">
             <button class="bg-red text-white fs-montserrat">Add to Cart</button>
             <p class="fs-montserrat bold-700">₹1200</p>
@@ -173,33 +187,6 @@
         </div>
       </section>
     </div>
-
-    <section>
-      <div class="sidebar-search text-black bg-gray flex">
-        <input type="text" placeholder="Search Here" class="fs-montserrat bg-gray">
-        <div>
-          <i class="uil uil-search bg-red text-white"></i>
-        </div>
-      </div>
-
-      <aside class="sidebar-category">
-        <div class="category-list flex">
-          <h3 class="fs-poppins bold-700 fs-200">Product Categories</h3>
-          <i id="arrow" class="uil uil-angle-right" data-category="false"></i>
-        </div>
-
-        <!-- Category List -->
-         <div class="shop-category-list">
-          <ul id="side-nav" class="sidebar-nav grid" data-category="false">
-            <li><a class="fs-montserrat text-black bold-500" href="">Mens Shoes</a></li>
-            <li><a class="fs-montserrat text-black bold-500" href="">Womens Shoes</a></li>
-            <li><a class="fs-montserrat text-black bold-500" href="">Mens Sandles</a></li>
-            <li><a class="fs-montserrat text-black bold-500" href="">Womens Sandles</a></li>
-          </ul>
-         </div>
-
-      </aside>
-    </section>
    </main>
 
   <!-- Footer -->
